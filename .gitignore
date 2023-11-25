@@ -4,6 +4,7 @@
 /backend/venv
 /backend/__pycache__
 .mmd
+Dockerfile.local
 
 # dependencies
 /node_modules
