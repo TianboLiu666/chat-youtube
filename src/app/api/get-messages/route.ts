@@ -3,7 +3,7 @@ import { messages } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export async function POST(req: Request) {
   console.log('Entering get messages')

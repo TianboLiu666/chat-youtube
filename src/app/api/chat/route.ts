@@ -14,17 +14,26 @@ export async function POST(req: Request) {
     console.log("entering chat");
     const { messages, chatId } = await req.json();
     const _chats = await db.select().from(chats).where(eq(chats.id, chatId));
-    // const chat = _chats.find((chat) => chat.videoId === videoId)
-    // if ((_chats.length != 1) {
-
-    // }
     const videoId = _chats[0].videoId;
     const lastMessage = messages[messages.length - 1];
     console.log("Im here");
-    const _data = await axios.post("http://127.0.0.1:8000/api/getContext", {
-      query: lastMessage.content,
-      videoId: videoId,
-    });
+    console.log(process.env.NEXT_PUBLIC_FLASK_URL);
+    console.log(process.env.BACKEND);
+    const _data = await axios.post(
+      // "http://0.0.0.0:8000//api/getContext",
+      // "http://python-flask:8000/api/getContext",
+      `${process.env.BACKEND}/api/getContext`,
+      {
+        query: lastMessage.content,
+        videoId: videoId,
+      },
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const context = _data.data.substring(0, 3000);
     const prompt = {
       role: "system",

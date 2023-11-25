@@ -1,8 +1,19 @@
 version: '3'
 services:
+  python-flask:
+    build:
+      # Specify our app directory as the context
+      context: backend
+      # Use the Dockerfile that exists within the directory we specified above
+      dockerfile: ./Dockerfile
+    ports:
+      # Flask server
+      - "8000:8000"
   nextjs:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports: 
       - "3000:3000"
+    depends_on:
+      - python-flask

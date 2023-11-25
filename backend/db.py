@@ -59,7 +59,7 @@ def getMatchesFromEmbeddings(query, videoId):
     content = ""
     for i in res:
         content += i[0]
-    content
+    # content
 
     return content
 

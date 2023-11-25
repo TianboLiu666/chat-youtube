@@ -6,8 +6,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+openai_apikey = os.environ["OPENAI_API_KEY"]
 
-client = OpenAI()
+client = OpenAI(api_key=openai_apikey)
+# client = OpenAI()
 
 model_size = "small"
 model = WhisperModel(model_size, device="cpu", compute_type="int8")

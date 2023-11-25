@@ -11,7 +11,6 @@ type Props = {
   userId: string;
 };
 
-// let url = "https://arxiv.org/pdf/2310.07778.pdf";
 
 const URLUpload = ({ userId }: Props) => {
   const [url, setUrl] = React.useState("");
@@ -27,17 +26,14 @@ const URLUpload = ({ userId }: Props) => {
       userId: string;
     }) => {
       // const _transcript = await axios.post("/api/py/transcript", { videoId });
-
       console.log("Entering create mutation function");
       // console.log(_transcript);
-      const response = await axios.post("/api/py/create", {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_FLASK_URL}/api/create`, {
         videoId,
         userId,
       });
       console.log("Done embedding");
       console.log(response.data);
-      // console.log(response.data[0]);
-      console.log(response);
       return response.data;
     },
   });
@@ -50,22 +46,11 @@ const URLUpload = ({ userId }: Props) => {
       if (chat) {
         try {
           const _transcript = await axios.post(
-            "http://127.0.0.1:8000/api/transcript",
+            `${process.env.NEXT_PUBLIC_FLASK_URL}/api/transcript`,
             {
               videoId,
             }
           );
-          // /api/py/transcript
-          // const _transcript = await fetch(
-          //   "http://127.0.0.1:8000/api/transcript",
-          //   {
-          //     method: "POST", // or 'PUT'
-          //     headers: {
-          //       "Content-Type": "application/json",
-          //     },
-          //     body: JSON.stringify({ videoId: videoId }),
-          //   }
-          //   );
           console.log(_transcript);
         } catch (error) {
           console.log(error);
