@@ -1,6 +1,6 @@
 FROM python:3.11-alpine as build
 
-RUN apt-get update -y
+# RUN apt-get update -y
 
 WORKDIR /code
 

@@ -12,21 +12,6 @@ type Props = {
 const page = ({ params: { url } }: Props) => {
   //   console.log(decodeURIComponent(url));
   const videoId = decodeURIComponent(url) as string;
-  // console.log(url);
-  // console.log(`https://www.youtube.com/embed/${url}`);
-
-  // React.useEffect(() => {
-  //   const init = async () => {
-  //     // console.log(url, typeof url);
-  //     const response = await axios.get("/api/py/transcript", {
-  //       params: { url: url },
-  //     });
-  //     // console.log('data')
-  //     // console.log(response.data[0]);
-  //     console.log(typeof response);
-  //   };
-  //   init();
-  // }, []);
 
   return (
     <div className="flex flex-row mt-16 w-full">
