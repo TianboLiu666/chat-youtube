@@ -1,10 +1,11 @@
-FROM python:3.11-alpine as build
+FROM python:3.11-slim-bullseye
 
 # RUN apt-get update -y
 
 WORKDIR /code
 
-RUN brew install pkg-config
+RUN apt-get update -y
+RUN apt-get install pkg-config -y
 COPY ./requirements.txt /code/requirements.txt
 RUN pip3 install -r requirements.txt
 
