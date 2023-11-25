@@ -18,4 +18,5 @@ ENV FLASK_RUN_HOST 0.0.0.0
 
 EXPOSE 8000
 
-CMD ["flask", "run", "-h", "0.0.0.0", "-p", "8000"]
+CMD ["python3", "index.py","run", "-h", "0.0.0.0", "-p", "8000"]
+# CMD ["flask", "run", "-h", "0.0.0.0", "-p", "8000"]
