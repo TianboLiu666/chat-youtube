@@ -4,7 +4,7 @@ FROM python:3.11-alpine as build
 
 WORKDIR /code
 
-RUN apt-get install pkg-config -y
+RUN pip install pkg-config
 COPY ./requirements.txt /code/requirements.txt
 RUN pip3 install -r requirements.txt
 
