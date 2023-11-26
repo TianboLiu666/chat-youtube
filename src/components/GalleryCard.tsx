@@ -15,7 +15,7 @@ const GalleryCard = async ({ videoId }: Props) => {
     response.data.items[0].snippet.thumbnails?.high.url ||
     response.data.items[0].snippet.thumbnails?.default.url;
   //   console.log(response.data.items[0].snippet.thumbnails.high.url);
-  const name = response.data.items[0].snippet.localized.title;
+  const name = response.data.items[0].snippet.localized.title || response.data.items[0].snippet.title || '';
   return (
     <div className="border rounded-lg border-secondary drop-shadow-lg">
       <div className="relative">
