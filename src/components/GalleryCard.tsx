@@ -12,12 +12,12 @@ const GalleryCard = async ({ videoId }: Props) => {
     `https://www.googleapis.com/youtube/v3/videos?key=${process.env.YOUTUBE_API}&part=snippet&id=${videoId}`
   );
   const imageUrl =
-    response.data.items[0].snippet.thumbnails?.high.url ||
-    response.data.items[0].snippet.thumbnails?.default.url;
+    response.data.items[0]?.snippet.thumbnails?.high.url ||
+    response.data.items[0]?.snippet.thumbnails?.default.url;
   //   console.log(response.data.items[0].snippet.thumbnails.high.url);
   const name =
-    response.data.items[0].snippet.localized.title ||
-    response.data.items[0].snippet.title ||
+    response.data.items[0]?.snippet.localized.title ||
+    response.data.items[0]?.snippet.title ||
     "";
   return (
     <div className="border rounded-lg border-secondary drop-shadow-lg">
