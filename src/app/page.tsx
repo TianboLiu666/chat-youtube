@@ -1,9 +1,5 @@
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import Image from 'next/image'
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-   <Button>Click</Button>
-  )
+  return redirect("/gallery");
 }

@@ -30,7 +30,7 @@ const page = async ({ params: { slug } }: Props) => {
   }
   const chat = _chats[_chats.length-1]
   // const chat = _chats.find((chat) => chat.videoId === videoId);
-  console.log(chat)
+  // console.log(chat)
 
   if (!chat) {
     return redirect("/");

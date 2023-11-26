@@ -19,11 +19,11 @@ const Navbar = async (props: Props) => {
             Youtube Helper
           </p>
         </Link>
-        <div className="mx-auto items-center">
+        {/* <div className="mx-auto items-center">
           <Link href={"/gallery"} className="mr-3 items-center">
             <Button className="bg-slate-300 border-2 hover:bg-indigo-800 dark:border-white">Find Your Own Video</Button>
           </Link>
-        </div>
+        </div> */}
         <div className="flex items-center">
           <Link href={"/gallery"} className="mr-3 items-center">
             Gallery
@@ -38,7 +38,7 @@ const Navbar = async (props: Props) => {
               </Link>
             </>
           )}
-          <ThemeToggle className="mr-3"/>
+          <ThemeToggle className="mr-3" />
           <div className="flex items-center">
             {session?.user ? (
               <UserAccountNav user={session.user} />
