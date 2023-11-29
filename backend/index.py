@@ -50,6 +50,7 @@ def whisper2():
     res.headers["Content-Encoding"] = "none"
     res.headers["Cache-Control"] = "no-cache, no-transform"
     res.headers["Connenction"] = "keep-live"
+    res.headers["X-Accel-Buffering"] = "no"
 
     return res
 
