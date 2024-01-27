@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Chat Youtube",
-  description: "Chat and get transcript of Youtube Videos",
+  description: "Chat and Get Transcript of Youtube Videos",
 };
 
 export default function RootLayout({
