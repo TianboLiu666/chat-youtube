@@ -4,7 +4,6 @@ import SignInButton from "./SignInButton";
 import { getAuthSession } from "@/lib/auth";
 import UserAccountNav from "./UserAccountNav";
 import { ThemeToggle } from "./ThemeToggle";
-import { Button } from "./ui/button";
 
 type Props = {};
 
