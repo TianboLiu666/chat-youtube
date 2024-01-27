@@ -1,6 +1,5 @@
 "use client";
 import Transcript from "@/components/Transcript";
-import axios from "axios";
 import React from "react";
 
 type Props = {
