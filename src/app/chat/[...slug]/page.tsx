@@ -36,7 +36,6 @@ const page = async ({ params: { slug } }: Props) => {
     return redirect("/");
   }
   // const chatId = chat.id;
-  console.log(chatId)
 
   return (
     <div className="flex flex-row mt-16 w-full">
