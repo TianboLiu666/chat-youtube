@@ -95,7 +95,6 @@ const URLUpload = ({ userId }: Props) => {
           className="w-full rounded-md border border-input h-10 ring-offset-background px-3 mr-2 bg-slate-300/30"
           onChange={handleChange}
         />
-        {/* <input type="submit"/> */}
         <div className="flex w-full justify-center mt-4 items-center">
           <Button
             type="submit"
