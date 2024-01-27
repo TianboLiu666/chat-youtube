@@ -28,7 +28,7 @@ const GalleryCard = async ({ videoId }: Props) => {
             className="object-contain rounded-t-lg"
             width={500}
             height={500}
-            alt="Image"
+            alt="Image of the video"
           ></Image>
           <span className="absolute px-2 py-1 text-white rounded-md bg-black/60 w-fit bottom-2 left-2 right-2">
             {name}

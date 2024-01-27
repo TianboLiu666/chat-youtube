@@ -8,7 +8,7 @@ type Props = {}
 const GalleryPage = async (props: Props) => {
   // const _chats = await db.select().from(chats)
   const videos = await db.selectDistinct({videoId: chats.videoId}).from(chats)
-  console.log(videos)
+  // console.log(videos)
 
   return (
     <div className='py-8 mx-auto max-w-7xl'>
